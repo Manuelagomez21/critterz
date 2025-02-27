@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8"/>
+       <title>Critterz</title>
+       <link rel="stylesheet" href="./style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section id="Seleccionar-mascota">
+        
+            <h1 class="titulo"> Critterz</h1>
+
+            <h2 class="subtitulo">Elige tu mascota</h2>
+
+            <div id="contenedorTarjetas" class="tarjetas">
+                
+            </div>
+
+            <button id="boton-mascota">Seleccionar</button>
+            
+        </section>
+
+        <section id="ver-mapa">
+            <h2 class="subtitulo"> Recorre el mapa con tu Critterz</h2>
+            <canvas id="mapa"></canvas>
+
+            <button onmouseup="detenerMovimiento()"
+                    ontouchend= "detenerMovimiento()"
+                    onmousedown="moverUp()"
+                    ontouchstart="moverUp()"
+                    >⬆️</button>
+            <div>
+                <button  onmouseup="detenerMovimiento()"
+                         ontouchend= "detenerMovimiento()"
+                         onmousedown="moverLeft()"
+                         ontouchstart="moverLeft()"
+                         >⬅️</button>
+                <button  onmouseup="detenerMovimiento()" 
+                         ontouchend= "detenerMovimiento()" 
+                         onmousedown="moverDown()"
+                         ontouchstart="moverDown()"
+                         >⬇️</button>
+                <button  onmouseup="detenerMovimiento()"
+                         ontouchend= "detenerMovimiento()" 
+                         onmousedown="moverRight()"
+                         ontouchstart="moverRight()"
+                         >➡️</button>
+            </div>
+        </section>
+
+       
+        <section id="Seleccionar-ataque">
+            <h1 class="titulo"> Critterz</h1>
+
+            <h2 class="subtitulo">Elige tu ataque </h2>
+
+            <div id ="contenedorAtaques" class="tarjetas-ataques">
+               
+            </div>
+
+                <div id="mensajes">
+                    <p id="resultado">¡Buena suerte!</p>
+                    <section id="Reiniciar">
+                        <button id="boton-reiniciar">Reiniciar</button>
+                   </section>
+                </div>
+
+            <div class="ataques">
+                <div class="ataques-jugador">
+                    <p id="vidas-jugador">0</p>
+                    <p id="mascota-jugador"></p>
+                    <div id="ataques-del-jugador"></div>
+                </div>
+                <div class="ataques-enemigo">
+                    <p id="vidas-enemigo">0</p>
+                    <p id="mascota-enemigo"></p>
+                    <div id="ataques-del-enemigo"></div>
+                </div>
+            </div>   
+            </section>
+            <script src="./critterz.js"></script>
+    </body>
+</html>

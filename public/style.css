@@ -1,0 +1,198 @@
+  @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap'); 
+  @import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+  
+ 
+  body{
+    font-family: "Eater", serif;
+    background-image: url(./fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+  }
+
+  #Seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+  }
+ 
+
+  .titulo{
+    font-size: 80px;
+    font-family: "Honk", system-ui;
+    margin-bottom: 1px;
+    margin-top: 20px;
+  }
+   
+  .subtitulo{
+    color: orange;
+    font-size: 40px;
+    height:100px;
+  }
+
+
+  .tarjetas, .tarjetas-ataques{
+    display: flex;
+    gap: 16px;
+    flex-wrap:wrap ;
+    justify-content:center ;
+    font-size: 25px;
+    margin-top: 10px
+
+  }
+  .boton-ataque:hover{
+    color: #e90a0a;
+    text-shadow: 0 0 10px #eae6eb;
+  }
+
+  .tarjeta-de-critterz {
+    height: 147px;
+    width: 180px;
+    background: linear-gradient(to left, #00000000, #850F8D, #00000000);
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Eater", serif;
+    box-shadow: 0px 0px 15px 15px #0a3ee9;
+    line-height: 0.9em;  
+  }
+  
+   .tarjeta-de-critterz img{
+    width: 140px;
+  }
+
+   /* cuando paso el mouse se pone una manito */
+   .tarjeta-de-critterz:hover {
+    cursor: pointer;
+  }
+
+  #boton-mascota{
+    background: linear-gradient(to left, #00000000, #e519e6, #00000000);
+    width: 230px;
+    height: 31px;
+    border: 1px;
+    margin-top: 30px;
+    font-family: "Eater", serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #boton-mascota:hover{
+      cursor: pointer;
+  }
+  
+  input{
+    display: none;
+  }
+
+  /* para indicar que selecciono una mascota */
+  input:checked+label {
+    background-color: var(--main-color-3);
+    color:#e519e6;
+    box-shadow: 1px 1px 10px var(--main-color-1)
+  }
+
+  #Seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .boton-ataque{
+    background: linear-gradient(to left, #00000000, #e519e6, #00000000);
+    width: 116px;
+    height: 36px; 
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    font-family: "Eater", serif;
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  #mensajes{
+    background-color: #C738BD;
+    width: 280px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+ 
+  #boton-reiniciar{
+    border:none;
+    color: #7F27FF;
+    font-family: "Eater", serif;
+    border-radius: 20px;
+
+  }
+
+  .ataques{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(5, 20px);
+  }
+
+  #vidas-jugador, #vidas-enemigo{
+    font-size: 32px;
+    margin-bottom: 0;
+    color: rgb(0, 0, 0);
+  }
+
+  .ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  #ver-mapa button{
+      background: linear-gradient(to left, #00000000, #e519e6, #00000000);
+      width: 80px;
+      height: 40px;
+      border: 1px;
+      margin: 10px 0;
+      font-family: "Eater", serif;
+      font-size: 20px;
+      
+    }
+ 
+  @media (max-width: 432px) {
+    .tarjetas, .tarjetas-ataques{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:center ;
+      color: orange;
+      margin-top: 42px;
+      line-height: 0.9em
+  }
+    
+  }
+
+  @media (max-width: 400px) {
+   #ver-mapa div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   }
+  }
+    
+  
